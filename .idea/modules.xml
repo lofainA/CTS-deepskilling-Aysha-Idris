@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/AdaptorPatternExample/AdaptorPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/AdaptorPatternExample/AdaptorPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/BuilderPatternExample/BuilderPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/BuilderPatternExample/BuilderPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CTS-deepskilling-prep.iml" filepath="$PROJECT_DIR$/.idea/CTS-deepskilling-prep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/DecoratorPatternExample/DecoratorPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/DecoratorPatternExample/DecoratorPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/FactoryMethodPatternExample/FactoryMethodPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/FactoryMethodPatternExample/FactoryMethodPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/ObserverPatternExample/ObserverPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/ObserverPatternExample/ObserverPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/ProxyPatternExample/ProxyPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/ProxyPatternExample/ProxyPatternExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns and Principles/SingletonPatternExample/SingletonPatternExample.iml" filepath="$PROJECT_DIR$/Design Patterns and Principles/SingletonPatternExample/SingletonPatternExample.iml" />
+    </modules>
+  </component>
+</project>
