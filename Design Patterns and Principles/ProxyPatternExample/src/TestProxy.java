@@ -1,7 +1,7 @@
 public class TestProxy {
     public static void main(String[] args) {
-        Image image1 = new ProxyImage("1");
-        Image image2 = new ProxyImage("1");
+        Image image1 = new ProxyImage("5");
+        Image image2 = new ProxyImage("5");
 
         long naive = test(image1);
         long smart = test(image2);

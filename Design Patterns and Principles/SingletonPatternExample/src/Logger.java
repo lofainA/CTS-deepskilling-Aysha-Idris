@@ -14,6 +14,7 @@ public class Logger {
     private Logger() {}
 
     public static Logger getInstance() {
+        System.out.println("Getting logger instance..");
         return logger;
     }
 }

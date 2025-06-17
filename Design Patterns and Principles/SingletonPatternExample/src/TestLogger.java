@@ -6,7 +6,7 @@ public class TestLogger {
         int n = 0;
         Logger lg = Logger.getInstance();
         do {
-            System.out.println("1. Increase count\n2. Decrease Count\n3. New Logger\n4. Exit\n");
+            System.out.println("1. Increase count\t2. Decrease Count\t3. New Logger\t4. Exit\t");
             n = sc.nextInt();
 
             switch (n) {

@@ -34,7 +34,7 @@ public class RealImage implements Image {
         ImageIcon icon = new ImageIcon(image);
         JLabel label = new JLabel(icon);
         frame.getContentPane().add(label, BorderLayout.CENTER);
-
+        frame.setPreferredSize(new Dimension(400, 300));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
