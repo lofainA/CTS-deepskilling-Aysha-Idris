@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Catalogue {
-    static Product[] products = new Product[100];
+    static Product[] products = new Product[11];
     static int pointer = 0;
 
     static {
@@ -21,9 +21,5 @@ public class Catalogue {
 
     public static int size() {
         return pointer + 1;
-    }
-
-    public static void sort() {
-        Arrays.sort(products);
     }
 }

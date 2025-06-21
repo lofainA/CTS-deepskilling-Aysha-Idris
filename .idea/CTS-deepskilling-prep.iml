@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/11-DependencyInjectionExample/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/8-StrategyPatternExample/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/9-CommandPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/2-EcommerceSearch/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

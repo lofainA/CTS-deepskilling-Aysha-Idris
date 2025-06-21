@@ -12,9 +12,9 @@ public class Product {
 
     public void displayDetails() {
         System.out.println(
-            "Id: " + productId + 
-            "\nName: " + productName +
-            "\nCategory: " + category +
+            "\033[0;1mId: \033[0;0m" + productId +
+            ", \033[0;1mName: \033[0;0m" + productName +
+            ", \033[0;1mCategory: \033[0;0m" + category +
             "\n---------------------"
         );
     }
