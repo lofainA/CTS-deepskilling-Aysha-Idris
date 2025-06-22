@@ -12,9 +12,28 @@
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/2-EcommerceSearch/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/5-TaskManagementSystem/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/7-FinancialForecast/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/1-InventoryManagementSystem/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/2-EcommerceSearch/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/3-SortingCustomerOrders/output" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/3-SortingCustomerOrders/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/4-EmployeeManagementSystem/output" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/4-EmployeeManagementSystem/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/5-TaskManagementSystem/ouput" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/6-LibraryManagementSystem/output" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/6-LibraryManagementSystem/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Data Structures and Algorithms/7-FinancialForecast/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/1-SingletonPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/11-DependencyInjectionExample/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/2-FactoryMethodPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/3-BuilderPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/4-AdaptorPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/5-DecoratorPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/6-ProxyPatternExample/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/6-ProxyPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/7-ObserverPatternExample/ouput" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/7-ObserverPatternExample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/8-StrategyPatternExample/output" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Week 1 - Design Patterns and Principles/9-CommandPatternExample/ouput" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
