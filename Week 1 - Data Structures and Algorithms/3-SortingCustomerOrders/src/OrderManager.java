@@ -1,31 +1,33 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Scanner;
-
 public class OrderManager {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        Order[] orders = {
-            new Order("Rainbow Confetti Cupcakes x6", 660),
-            new Order("Biscoff mousse", 300),
-            new Order("Caramel filled Donut", 250),
-            new Order("Triple Chocolate Cake", 760),
-            new Order("Red Velvet Cheesecake Slice", 520),
-            new Order("Classic Tiramisu Cup", 390),
-            new Order("Mini Blueberry Tarts x3", 340),
-            new Order("Salted Caramel Brownies x4", 480),
-            new Order("Peanut Butter Fudge Bar", 270)
-        };
+        Order[] orders = Orders.orders;
 
-        System.out.println("Choose the sorting algorithm:\n1.Bubble Sort\n2.Quick Sort");
-        int opt = sc.nextInt();
+        System.out.println("Bubble sorting " + orders.length + " items...");
+        Sort strategy = new BubbleSort();
+        long bubble = test(strategy, orders);
 
-        Sort strategy = opt == 1 ? new BubbleSort() : new QuickSort();
-        strategy.sort(orders);
+        System.out.println("Quick sorting " + orders.length + " items...");
+        strategy = new QuickSort();
+        long quick = test(strategy, orders);
 
         for(int i = 0; i < orders.length; i++) {
+            if(orders[i] != null && i > 10) {
+                System.out.println("........");
+                break;
+            }
             orders[i].display();
         }
+
+        System.out.println("\n\033[0;1mTime saved by quick sort: " + (bubble-quick)/ 1_000_000.0 + "/ms\033[0;0m");
+    }
+
+    public static long test(Sort strategy, Order[] orders){
+        long startTime = System.nanoTime();
+        strategy.sort(orders);
+        long elapsedTime = System.nanoTime() - startTime;
+
+        System.out.println("Elapsed Time: " + (elapsedTime / 1_000_000.0) + " ms\n");
+        return elapsedTime;
     }
 }

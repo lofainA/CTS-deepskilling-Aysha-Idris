@@ -13,6 +13,7 @@
 ### Bubble Sort
 ![img.png](../images/ouput-images/week1-dsa/img-5.png)
 ### Quick Sort
+![img.png](../images/ouput-images/week1-dsa/img-8.png)
 
 ## Exercise - 4: <ins> Employee Management System </ins>
 ![img.png](../images/ouput-images/week1-dsa/img-7.png)

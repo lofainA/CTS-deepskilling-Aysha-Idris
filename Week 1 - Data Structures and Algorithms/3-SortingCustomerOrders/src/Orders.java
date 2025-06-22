@@ -1,0 +1,35 @@
+public class Orders {
+    public static Order[] orders = {
+            new Order("Rainbow Confetti Cupcakes x6", 660),
+            new Order("Biscoff Mousse", 300),
+            new Order("Caramel Filled Donut", 250),
+            new Order("Triple Chocolate Cake", 760),
+            new Order("Red Velvet Cheesecake Slice", 520),
+            new Order("Classic Tiramisu Cup", 390),
+            new Order("Mini Blueberry Tarts x3", 340),
+            new Order("Salted Caramel Brownies x4", 480),
+            new Order("Peanut Butter Fudge Bar", 270),
+            new Order("Lemon Drizzle Slice", 310),
+            new Order("Strawberry Cream Puff", 290),
+            new Order("Vanilla Bean Macarons x6", 600),
+            new Order("Choco Lava Cup", 330),
+            new Order("Mango Mousse Cake", 410),
+            new Order("Nutella Stuffed Croissant", 370),
+            new Order("Dark Chocolate Éclair", 360),
+            new Order("Pistachio Shortbread", 280),
+            new Order("Carrot Walnut Muffin", 320),
+            new Order("Coconut Cream Pie", 400),
+            new Order("Cinnamon Roll", 300),
+            new Order("Hazelnut Praline Square", 430),
+            new Order("Cherry Blossom Tart", 390),
+            new Order("Mint Chocolate Fudge", 310),
+            new Order("Blueberry Crumble Bar", 350),
+            new Order("Raspberry Lemon Slice", 300),
+            new Order("Mocha Cheesecake Slice", 520),
+            new Order("Banana Toffee Pudding", 390),
+            new Order("Almond Biscotti x5", 250),
+            new Order("Pumpkin Spice Cupcake", 370),
+            new Order("Cookies and Cream Bar", 440)
+    };
+
+}
