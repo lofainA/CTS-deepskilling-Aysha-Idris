@@ -1,0 +1,12 @@
+BEGIN EXECUTE IMMEDIATE 'DROP TABLE employees'; EXCEPTION WHEN OTHERS THEN NULL; END;
+/
+
+CREATE TABLE employees (
+  emp_id NUMBER PRIMARY KEY,
+  emp_name VARCHAR2(100),
+  salary NUMBER(10, 2)
+);
+
+INSERT INTO employees VALUES (101, 'Aysha Idris', 50000);
+INSERT INTO employees VALUES (102, 'Abdul Rahman', 45000);
+COMMIT;
