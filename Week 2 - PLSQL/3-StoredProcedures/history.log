@@ -1,0 +1,28 @@
+abc33535-8971-417b-9209-2a30e5fb8e2f:1750956846100:0:S:cl scr
+e3298dcf-d4d6-4155-b320-5d3ee14d4fed:1750956854172:211:S:CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest IS\nBEGIN\n  FOR acc IN (SELECT account_id, balance FROM accounts WHERE account_type = 'savings') LOOP\n    UPDATE accounts\n    SET balance = acc.balance + (acc.balance * 0.01)\n    WHERE account_id = acc.account_id;\n\n    DBMS_OUTPUT.PUT_LINE('Interest applied to account ID: ' || acc.account_id);\n  END LOOP;\n\n  COMMIT;\nEND;\n/
+67fdc33a-6279-4842-98b7-fece2b2e0cdb:1750956916547:0:S:SET SERVEROUTPUT ON;
+23c1ffbc-e1b7-4945-89b2-9762f0c3ea61:1750956926187:86:S:BEGIN\n  ProcessMonthlyInterest;\nEND;\n/
+720f4573-51e8-4984-a841-944bdbeed648:1750956938258:183:S:SELECT * FROM accounts WHERE account_type = 'savings';
+fd903b7b-54d5-4d60-b578-57842e5468d9:1750957024497:567:S:CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (\n  p_department_id IN NUMBER,\n  p_bonus_percent IN NUMBER\n) AS\nBEGIN\n  UPDATE employees\n  SET salary = salary + (salary * p_bonus_percent / 100)\n  WHERE department_id = p_department_id;\n\n  DBMS_OUTPUT.PUT_LINE('Bonus applied to department ID: ' || p_department_id);\n  COMMIT;\nEXCEPTION\n  WHEN OTHERS THEN\n    DBMS_OUTPUT.PUT_LINE('Error applying bonus: ' || SQLERRM);\n    ROLLBACK;\nEND;\n/
+5c454636-c13a-4322-a1fe-220a28f38882:1750957053067:241:S:BEGIN\n  UpdateEmployeeBonus(10, 10);\nEND;\n/
+6eea9372-59fa-4712-a8d0-07d967522058:1750957061651:47:S:SELECT * FROM employees WHERE department_id = 10;
+95aa4dbd-1c57-48d4-98f2-2261ccf3a61d:1750957100244:0:S:cl scr
+0840b41f-35c2-437c-bf5d-fb7ae4209f82:1750957108247:58:S:CREATE OR REPLACE PROCEDURE TransferFunds (\n  p_from_account IN NUMBER,\n  p_to_account IN NUMBER,\n  p_amount IN NUMBER\n) AS\n  v_balance NUMBER;\nBEGIN\n  -- Check balance\n  SELECT balance INTO v_balance FROM accounts WHERE account_id = p_from_account;\n\n  IF v_balance < p_amount THEN\n    RAISE_APPLICATION_ERROR(-20001, 'Insufficient funds.');\n  END IF;\n\n  -- Perform transfer\n  UPDATE accounts SET balance = balance - p_amount WHERE account_id = p_from_account;\n  UPDATE accounts SET balance = balance + p_amount WHERE account_id = p_to_account;\n\n  COMMIT;\n  DBMS_OUTPUT.PUT_LINE('Transferred ₹' || p_amount || ' from account ' || p_from_account || ' to ' || p_to_account);\nEXCEPTION\n  WHEN OTHERS THEN\n    DBMS_OUTPUT.PUT_LINE('Transfer failed: ' || SQLERRM);\n    ROLLBACK;\nEND;\n/
+ee86d0a0-7da6-4f27-b234-da4bc9bd3939:1750957117397:34:S:BEGIN\n  TransferFunds(2, 4, 1000);\nEND;\n/
+5160504c-acda-41ef-9f9c-66abc0e515c9:1750957129440:19:S:SELECT * FROM accounts WHERE account_id IN (2, 4);
+ccca30f7-6dde-465b-b36c-0754e5d0d2f4:1750957164387:326:S:BEGIN EXECUTE IMMEDIATE 'DROP TABLE accounts CASCADE CONSTRAINTS'; \n    EXCEPTION WHEN OTHERS THEN NULL; \nEND;\n/
+3f1b3bb7-dcbb-48a1-bf78-953264fef993:1750957165033:67:S:BEGIN EXECUTE IMMEDIATE 'DROP TABLE employees CASCADE CONSTRAINTS'; \n    EXCEPTION WHEN OTHERS THEN NULL; \nEND;\n/
+c479ffde-0534-4ba8-b2c9-9b803fa18749:1750957165531:109:S:CREATE TABLE accounts (\n  account_id NUMBER PRIMARY KEY,\n  customer_id NUMBER,\n  account_type VARCHAR2(20), \n  balance NUMBER(10, 2)\n);
+831964ee-fee3-46e0-ba48-d7f5a9df1d33:1750957166036:31:S:CREATE TABLE employees (\n  emp_id NUMBER PRIMARY KEY,\n  emp_name VARCHAR2(100),\n  department_id NUMBER,\n  salary NUMBER(10, 2)\n);
+0344f714-7a8b-41e6-bd6a-afae0a6ed248:1750957166350:39:S:INSERT INTO accounts (account_id, customer_id, account_type, balance) VALUES (1, 101, 'savings', 10000);
+d0367d3d-45b1-4972-91f6-e9772259205a:1750957166585:6:S:INSERT INTO accounts (account_id, customer_id, account_type, balance) VALUES (2, 101, 'checking', 5000);
+f0f5e7ac-b63b-4b39-ac74-628f56979ed2:1750957166857:11:S:INSERT INTO accounts (account_id, customer_id, account_type, balance) VALUES (3, 102, 'savings', 8000);
+1fc381bd-422c-4036-b25b-b041150c15e8:1750957167098:14:S:INSERT INTO accounts (account_id, customer_id, account_type, balance) VALUES (4, 103, 'savings', 3000);
+f6f7c4f4-057d-4bb2-aba7-e9d4d1f76c39:1750957167384:10:S:INSERT INTO employees (emp_id, emp_name, department_id, salary) VALUES (201, 'Aysha Ahmed', 10, 50000);
+f77fda8e-efcd-48ba-8468-669668ff0e1e:1750957167552:9:S:INSERT INTO employees (emp_id, emp_name, department_id, salary) VALUES (202, 'John Doe', 10, 48000);
+c06d4208-3fd4-4dc2-bca5-8bd99436e55d:1750957167747:12:S:INSERT INTO employees (emp_id, emp_name, department_id, salary) VALUES (203, 'Sara Khan', 20, 52000);
+68cd8af8-4c88-44c0-bd36-8e2589c614f0:1750957167959:9:S:INSERT INTO employees (emp_id, emp_name, department_id, salary) VALUES (204, 'Liam Patel', 20, 47000);
+fc004bf6-fd27-47d2-af23-ba7cb3f8318e:1750957168110:3:S:COMMIT;
+f4e37caa-ca4c-4887-8524-fea9bb57c587:1750957171407:0:S:cl scr
+c719437e-5447-4cd6-9027-99ef959b2ba9:1750957200385:29:S:SELECT * from accounts;
+d012d34e-6a6c-4850-86ed-09d16905e5af:1750957210648:20:S:SELECT * FROM employees;
