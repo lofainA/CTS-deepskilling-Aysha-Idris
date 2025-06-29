@@ -1,0 +1,4 @@
+21:45:44.320 [main] DEBUG excercise3.AppenderExample - Debug message: application starting...
+21:45:44.323 [main] INFO  excercise3.AppenderExample - Info message: user logged in
+21:45:44.324 [main] WARN  excercise3.AppenderExample - Warning message: low disk space
+21:45:44.324 [main] ERROR excercise3.AppenderExample - Error message: exception occurred
